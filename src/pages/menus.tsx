@@ -27,6 +27,10 @@ class SiderDemo extends React.Component {
         <Sider trigger={null} collapsible collapsed={this.state.collapsed}>
           <div className="logo" />
           <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
+          <Menu.Item key="0">
+              <UserOutlined />
+              <span>Adminqwwe</span>
+            </Menu.Item>
             <Menu.Item key="1">
               <UserOutlined />
               <span>Admin</span>
@@ -53,7 +57,7 @@ class SiderDemo extends React.Component {
             style={{
               margin: '24px 16px',
               padding: 24,
-              minHeight: '1000px',
+              height: '850px',
             }}
           >
             Content
