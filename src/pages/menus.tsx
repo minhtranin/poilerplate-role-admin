@@ -1,13 +1,8 @@
 import { Layout, Menu } from 'antd';
-import {
-  MenuUnfoldOutlined,
-  MenuFoldOutlined,
-  UserOutlined,
-  VideoCameraOutlined,
-  UploadOutlined,
-} from '@ant-design/icons';
+import { MenuUnfoldOutlined, MenuFoldOutlined, UserOutlined, VideoCameraOutlined, UploadOutlined } from '@ant-design/icons';
 import React from 'react';
-
+import { Route, Link, BrowserRouter as Router } from 'react-router-dom';
+import Product from './products';
 const { Header, Sider, Content } = Layout;
 
 class SiderDemo extends React.Component {
@@ -29,7 +24,10 @@ class SiderDemo extends React.Component {
           <Menu theme="dark" mode="inline" defaultSelectedKeys={['1']}>
           <Menu.Item key="0">
               <UserOutlined />
-              <span>Adminqwwe</span>
+              <Router>
+                <Link to="/productss">Home</Link>
+                <Route exact path="/productss" component={Product}></Route>
+              </Router>
             </Menu.Item>
             <Menu.Item key="1">
               <UserOutlined />
